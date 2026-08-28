@@ -1,5 +1,0 @@
-objective,reference,direction,rmse,mean_actual,mae,mse,r2,rmse_over_mean_actual,accuracy_score,label
-Thermal comfort accuracy,zero outside-band temperature error,minimize,0.0,0.0,0.0,0.0,0.0,0.0,1.0,Excellent
-Low energy consumption accuracy,zero weather-normalized climate-energy over-budget error; budget is derived from outdoor cold/heat pressure and comfort-band success,minimize/weather-normalized,69.29696171690881,54.892182291666664,54.892182291666664,4802.068903194726,-1.6843438210473587,1.2624195071841582,0.9261015190972223,Good
-Low feed consumption accuracy,growth-adjusted feed pressure per unit gain relative to SARG/best-observed reference,minimize/growth-adjusted-reference,4.915436467956056,11.79944645234604,3.8143568443025897,24.16151567051231,0.6552518691957556,0.41658195473896475,0.51004632571771,Weak
-Beef production / growth accuracy,best SARG growth-simulator reference growth trajectory,maximize/reference,17.3638731579746,562.7987610127637,15.484910657583157,301.50409104623077,0.9957453587686952,0.030852721009420988,0.9691472789905791,Excellent
