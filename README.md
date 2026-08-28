@@ -23,7 +23,6 @@ The framework also stores knowledge obtained from a long optimization episode in
 https://doi.org/10.48550/arXiv.2608.27185
 
 ---
-![Graphical Abstract](images/Graphical_Abstract_Diagram.jpg)
 
 # SE-TDDT pour des étables d’engraissement bovin à haute efficacité énergétique
 
