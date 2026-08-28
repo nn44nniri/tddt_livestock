@@ -1,0 +1,23 @@
+{
+  "storage_name": "SS-KStore",
+  "created_at": "2026-05-17T19:38:09.614868Z",
+  "started_at": "2026-05-11T23:04:58.744509Z",
+  "episode_trace_rows": 288000,
+  "segment_size": 1000,
+  "sample_every": 50,
+  "inner_segments": 288,
+  "rl_segments": 576,
+  "paths": {
+    "inner_segments": "/home/shabgard/tddt_livestock/working/ss_kstore/segments/inner_loop",
+    "rl_segments": "/home/shabgard/tddt_livestock/working/ss_kstore/segments/rl_updates",
+    "daily_summary": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/daily_summary.csv",
+    "hourly_summary": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/hourly_summary.csv",
+    "sampled_trace": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/sampled_trace.csv",
+    "tail_trace": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/tail_trace.csv",
+    "learning_daily": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/learning_daily.csv",
+    "learning_weekly": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/learning_weekly.csv",
+    "learning_monthly": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/learning_monthly.csv",
+    "learning_quarterly": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/learning_quarterly.csv",
+    "learning_yearly": "/home/shabgard/tddt_livestock/working/ss_kstore/summaries/learning_yearly.csv"
+  }
+}

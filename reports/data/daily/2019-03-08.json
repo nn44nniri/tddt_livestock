@@ -1,0 +1,183 @@
+{
+  "labels": [
+    "2019-03-08 03:25:00",
+    "2019-03-08 07:35:00",
+    "2019-03-08 11:45:00",
+    "2019-03-08 15:55:00",
+    "2019-03-08 20:05:00"
+  ],
+  "indoor_temp_c": [
+    14.9963,
+    15.2496,
+    15.1867,
+    14.9599,
+    14.8924
+  ],
+  "outdoor_temp_c": [
+    4.0558,
+    6.8183,
+    6.515,
+    3.9017,
+    3.1667
+  ],
+  "lct_c": [
+    -12.0,
+    -14.0,
+    -14.0,
+    -14.0,
+    -12.5
+  ],
+  "uct_c": [
+    28.25,
+    27.5,
+    27.75,
+    27.25,
+    28.25
+  ],
+  "indoor_rh_pct": [
+    34.3469,
+    33.6325,
+    32.1875,
+    34.6327,
+    32.7953
+  ],
+  "outdoor_rh_pct": [
+    67.6667,
+    55.4167,
+    53.75,
+    68.75,
+    67.9167
+  ],
+  "indoor_air_speed_m_s": [
+    0.2472,
+    0.2454,
+    0.2547,
+    0.2521,
+    0.2516
+  ],
+  "outdoor_wind_m_s": [
+    1.4083,
+    1.02,
+    3.0075,
+    2.4525,
+    2.3308
+  ],
+  "ventilation_group_pct": [
+    100.0,
+    100.0,
+    100.0,
+    100.0,
+    100.0
+  ],
+  "heating_group_pct": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "light_on": [
+    false,
+    true,
+    true,
+    true,
+    true
+  ],
+  "electric_kw": [
+    10.36,
+    12.124,
+    12.124,
+    12.124,
+    12.124
+  ],
+  "gas_kw": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "growth": {
+    "labels": [
+      "2019-03-08"
+    ],
+    "groups": {
+      "inputs_identity": [
+        {
+          "label": "fattening_day",
+          "data": [
+            967.0
+          ]
+        },
+        {
+          "label": "diet",
+          "data": [
+            2.0
+          ]
+        },
+        {
+          "label": "breed",
+          "data": [
+            6.0
+          ]
+        }
+      ],
+      "growth_outputs": [
+        {
+          "label": "tbw_kg",
+          "data": [
+            905.9461
+          ]
+        },
+        {
+          "label": "beef_production_kg",
+          "data": [
+            478.9011
+          ]
+        },
+        {
+          "label": "heat_production",
+          "data": [
+            3.0043
+          ]
+        },
+        {
+          "label": "adg_kg_day",
+          "data": [
+            0.3529
+          ]
+        },
+        {
+          "label": "derived_adg_kg_day",
+          "data": [
+            0.0
+          ]
+        }
+      ],
+      "feed_outputs": [
+        {
+          "label": "feed_intake_kg_dm_day",
+          "data": [
+            10.3709
+          ]
+        },
+        {
+          "label": "feed_efficiency_raw_maturity_sensitive",
+          "data": [
+            0.034
+          ]
+        }
+      ],
+      "thermal_outputs": [],
+      "limitations_state": [],
+      "other_numeric": [
+        {
+          "label": "id",
+          "data": [
+            967.0
+          ]
+        }
+      ]
+    }
+  }
+}

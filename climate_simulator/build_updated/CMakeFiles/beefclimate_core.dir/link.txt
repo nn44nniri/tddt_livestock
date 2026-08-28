@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbeefclimate_core.a CMakeFiles/beefclimate_core.dir/src/config.cpp.o CMakeFiles/beefclimate_core.dir/src/csv.cpp.o CMakeFiles/beefclimate_core.dir/src/animal_load.cpp.o CMakeFiles/beefclimate_core.dir/src/thermoregulation.cpp.o CMakeFiles/beefclimate_core.dir/src/thermoregulation_config.cpp.o CMakeFiles/beefclimate_core.dir/src/simulator.cpp.o CMakeFiles/beefclimate_core.dir/src/report.cpp.o CMakeFiles/beefclimate_core.dir/src/ifc_reader.cpp.o CMakeFiles/beefclimate_core.dir/src/herd_inventory.cpp.o
+/usr/bin/ranlib libbeefclimate_core.a

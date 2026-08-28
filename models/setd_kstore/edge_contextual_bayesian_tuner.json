@@ -1,0 +1,249 @@
+{
+  "algorithm": "edge_contextual_gaussian_bayesian_tuner",
+  "formal_layer": "slow_rl_bayesian_mpc_weight_tuning",
+  "alpha": 0.05,
+  "exploration_weight": 0.15,
+  "profiles": {
+    "balanced": {
+      "comfort_weight_bias": 1.0,
+      "energy_weight_bias": 1.0,
+      "gas_weight_bias": 1.0
+    },
+    "comfort_safe": {
+      "comfort_weight_bias": 1.25,
+      "energy_weight_bias": 0.9,
+      "gas_weight_bias": 1.05
+    },
+    "energy_saver": {
+      "comfort_weight_bias": 0.92,
+      "energy_weight_bias": 0.7,
+      "gas_weight_bias": 1.0
+    },
+    "air_quality": {
+      "comfort_weight_bias": 1.05,
+      "energy_weight_bias": 1.0,
+      "gas_weight_bias": 1.35
+    }
+  },
+  "stats": {
+    "ctx=C02|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.9682259555991021,
+        "var": 0.0021963025352656467,
+        "n": 27072.0
+      }
+    },
+    "ctx=C10|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.9705285465920538,
+        "var": 0.0002521506318220048,
+        "n": 61344.0
+      }
+    },
+    "ctx=C08|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.8234798549710584,
+        "var": 0.0002170636513434376,
+        "n": 9792.0
+      }
+    },
+    "ctx=C05|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.04129329481792453,
+        "var": 0.9807777083544066,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.04129481376901906,
+        "var": 0.9807799726781342,
+        "n": 1.0
+      },
+      "energy_saver": {
+        "mean": 0.041295506321681524,
+        "var": 0.9807810051046708,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.8186960855508671,
+        "var": 0.0031990257308246468,
+        "n": 33405.0
+      }
+    },
+    "ctx=C07|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.041322997965684394,
+        "var": 0.9808220024037387,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.8228070676639477,
+        "var": 7.303768901894174e-05,
+        "n": 19005.0
+      },
+      "energy_saver": {
+        "mean": 0.04132306751944904,
+        "var": 0.9808221061613658,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.04132304764739398,
+        "var": 0.9808220765169817,
+        "n": 1.0
+      }
+    },
+    "ctx=C06|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.04134009281640994,
+        "var": 0.9808475090969524,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.041340327525151044,
+        "var": 0.980847859371956,
+        "n": 1.0
+      },
+      "energy_saver": {
+        "mean": 0.041340405749870884,
+        "var": 0.9808479761135294,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.8195295276536578,
+        "var": 0.0018294832770997438,
+        "n": 23901.0
+      }
+    },
+    "ctx=C00|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.8119572345781865,
+        "var": 0.0050886900686808985,
+        "n": 44061.0
+      },
+      "comfort_safe": {
+        "mean": 0.0413577154014131,
+        "var": 0.9808738142491983,
+        "n": 1.0
+      },
+      "energy_saver": {
+        "mean": 0.04135747495397976,
+        "var": 0.9808734552589715,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.04135716709892376,
+        "var": 0.9808729956315918,
+        "n": 1.0
+      }
+    },
+    "ctx=C11|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.041335918106298664,
+        "var": 0.9808412791687158,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.8224124411839047,
+        "var": 0.00031251286538301913,
+        "n": 29949.0
+      },
+      "energy_saver": {
+        "mean": 0.04133601629142355,
+        "var": 0.9808414256833492,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.04133598683683107,
+        "var": 0.9808413817303328,
+        "n": 1.0
+      }
+    },
+    "ctx=C03|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.04136882909619582,
+        "var": 0.9808904093752641,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.8159076683143414,
+        "var": 0.0037727343150466483,
+        "n": 21597.0
+      },
+      "energy_saver": {
+        "mean": 0.021303233143224985,
+        "var": 0.9581915907495004,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.04136067308291342,
+        "var": 0.9808782302655831,
+        "n": 1.0
+      }
+    },
+    "ctx=C04|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.03597337264319514,
+        "var": 0.9733582078848375,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.03597347566042627,
+        "var": 0.9733583416671976,
+        "n": 1.0
+      },
+      "energy_saver": {
+        "mean": 0.03597357130722954,
+        "var": 0.9733584658783637,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.1974721519283314,
+        "var": 0.020830735031702977,
+        "n": 13245.0
+      }
+    },
+    "ctx=C09|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.036020413468589405,
+        "var": 0.9734193368653888,
+        "n": 1.0
+      },
+      "comfort_safe": {
+        "mean": 0.036020510117510736,
+        "var": 0.9734194625417187,
+        "n": 1.0
+      },
+      "energy_saver": {
+        "mean": 0.036020730978372446,
+        "var": 0.9734197497369038,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.7095176425967511,
+        "var": 0.0030788107366382118,
+        "n": 2301.0
+      }
+    },
+    "ctx=C01|phase=P_UNKNOWN|band=inside": {
+      "balanced": {
+        "mean": 0.015040203792829259,
+        "var": 0.9044891779756713,
+        "n": 2.0
+      },
+      "comfort_safe": {
+        "mean": 0.6857140575868845,
+        "var": 0.01328289697052667,
+        "n": 2300.0
+      },
+      "energy_saver": {
+        "mean": 0.007712927204212056,
+        "var": 0.9510737808913373,
+        "n": 1.0
+      },
+      "air_quality": {
+        "mean": 0.007712903503793974,
+        "var": 0.951073774292282,
+        "n": 1.0
+      }
+    }
+  }
+}

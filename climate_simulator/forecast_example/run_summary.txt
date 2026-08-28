@@ -1,0 +1,6 @@
+Simulation completed with 24 steps.
+Output directory: ../forecast_example
+Resolved IFC: ../Building_Information/beef_hall_120.ifc
+Forecast horizon seconds: 7200
+dt_seconds: 300
+Forecast mode: first indoor sensor row seeds initial state only; future steps are model predictions.

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Daily report: 2017-10-07</title><script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<style>
+body{font-family:Arial,sans-serif;margin:24px;color:#222} a{text-decoration:none;color:#0b5cad} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px} .card{border:1px solid #ddd;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)} .metric{font-size:1.2rem;font-weight:700} .muted{color:#666;font-size:.86rem} canvas{max-height:360px;margin:20px 0 32px} table{border-collapse:collapse;width:100%;font-size:.85rem} th,td{border:1px solid #ddd;padding:4px 6px} th{background:#f6f6f6} nav a{margin-right:12px}</style>
+</head><body><nav><a href='../index.html'>Report index</a><a href='index.html'>Section index</a></nav><h1>Daily report: 2017-10-07</h1><div class='grid'><div class='card'><div class='muted'>steps</div><div class='metric'>288.0000</div></div>
+<div class='card'><div class='muted'>indoor_temp_c_mean</div><div class='metric'>15.8910</div></div>
+<div class='card'><div class='muted'>indoor_temp_c_min</div><div class='metric'>15.4019</div></div>
+<div class='card'><div class='muted'>indoor_temp_c_max</div><div class='metric'>16.2688</div></div>
+<div class='card'><div class='muted'>outdoor_temp_c_mean</div><div class='metric'>15.6038</div></div>
+<div class='card'><div class='muted'>indoor_rh_pct_mean</div><div class='metric'>59.9710</div></div>
+<div class='card'><div class='muted'>outdoor_rh_pct_mean</div><div class='metric'>54.6042</div></div>
+<div class='card'><div class='muted'>ventilation_group_pct_mean</div><div class='metric'>52.6910</div></div>
+<div class='card'><div class='muted'>heating_group_pct_mean</div><div class='metric'>0.6944</div></div>
+<div class='card'><div class='muted'>electric_kw_mean</div><div class='metric'>6.6129</div></div>
+<div class='card'><div class='muted'>gas_kw_mean</div><div class='metric'>1.8317</div></div>
+<div class='card'><div class='muted'>comfort_error_mean</div><div class='metric'>0.0037</div></div>
+<div class='card'><div class='muted'>mpc_score_mean</div><div class='metric'>10644828290767483673367428382994785755677386444816711021361664884736.0000</div></div>
+<div class='card'><div class='muted'>actuator_command_changes</div><div class='metric'>9.0000</div></div>
+<div class='card'><div class='muted'>abrupt_actuator_changes</div><div class='metric'>5.0000</div></div>
+<div class='card'><div class='muted'>oscillatory_actuator_reversals</div><div class='metric'>3.0000</div></div>
+<div class='card'><div class='muted'>rl_q_delta_mean</div><div class='metric'>0.0002</div></div></div><h2>Climate and comfort</h2><canvas id='temp'></canvas><canvas id='rh'></canvas><canvas id='wind'></canvas><h2>Actuators and energy</h2><canvas id='act'></canvas><canvas id='energy'></canvas><h2>Outer-loop growth simulator outputs</h2><canvas id='growth'></canvas><p class='muted'>Data file: ../data/daily/2017-10-07.json</p>
+<script>
+const data = {"labels": ["2017-10-07 03:05:00", "2017-10-07 07:15:00", "2017-10-07 11:25:00", "2017-10-07 15:35:00", "2017-10-07 19:45:00", "2017-10-07 23:55:00"], "indoor_temp_c": [15.444, 16.0662, 16.1165, 16.0665, 15.8144, 15.81], "outdoor_temp_c": [9.3667, 17.8675, 21.5225, 17.6083, 13.45, 13.465], "lct_c": [-13.25, -14.0, -14.5, -14.0, -13.25, -13.25], "uct_c": [24.75, 22.25, 21.75, 21.75, 24.5, 24.5], "indoor_rh_pct": [53.1219, 64.9612, 66.5079, 68.4415, 56.0076, 56.2663], "outdoor_rh_pct": [76.3333, 43.5, 35.4167, 51.5833, 63.0, 63.25], "indoor_air_speed_m_s": [0.2499, 0.0946, 0.0912, 0.0912, 0.2487, 0.2471], "outdoor_wind_m_s": [1.98, 2.935, 2.235, 2.2333, 1.7225, 1.4125], "ventilation_group_pct": [100.0, 0.0, 0.0, 0.0, 100.0, 100.0], "heating_group_pct": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "light_on": [false, true, true, true, true, false], "electric_kw": [10.36, 1.764, 1.764, 1.764, 12.124, 10.36], "gas_kw": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "growth": {"labels": ["2017-10-07"], "groups": {"inputs_identity": [{"label": "fattening_day", "data": [450.0]}, {"label": "diet", "data": [2.0]}, {"label": "breed", "data": [6.0]}], "growth_outputs": [{"label": "tbw_kg", "data": [564.7584]}, {"label": "beef_production_kg", "data": [251.0853]}, {"label": "heat_production", "data": [8.1372]}, {"label": "adg_kg_day", "data": [1.0592]}, {"label": "derived_adg_kg_day", "data": [0.0]}], "feed_outputs": [{"label": "feed_intake_kg_dm_day", "data": [10.3516]}, {"label": "feed_efficiency_raw_maturity_sensitive", "data": [0.1023]}], "thermal_outputs": [], "limitations_state": [], "other_numeric": [{"label": "id", "data": [450.0]}]}}};
+const COLORS=['#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd','#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf'];
+function ds(label, values, colorIndex, dashed=false){return {label,data:values||[],borderColor:COLORS[colorIndex%COLORS.length],backgroundColor:COLORS[colorIndex%COLORS.length],borderDash:dashed?[6,4]:[],pointRadius:0,tension:.12}}
+function lineChart(id,labels,datasets,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'line',data:{labels:labels||[],datasets},options:{responsive:true,interaction:{mode:'index',intersect:false},scales:{y:{title:{display:true,text:yTitle}}}}})}
+function barChart(id,labels,values,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels||[],datasets:[{label:yTitle,data:values||[],backgroundColor:COLORS}]},options:{responsive:true,scales:{y:{beginAtZero:true}}}})}
+
+lineChart('temp', data.labels, [ds('Indoor temp C',data.indoor_temp_c,0),ds('Outdoor temp C',data.outdoor_temp_c,1),ds('LNZ/LCT C',data.lct_c,2,true),ds('UNZ/UCT C',data.uct_c,3,true)], 'Temperature C');
+lineChart('rh', data.labels, [ds('Indoor RH %',data.indoor_rh_pct,0),ds('Outdoor RH %',data.outdoor_rh_pct,1)], 'Relative humidity %');
+lineChart('wind', data.labels, [ds('Indoor wind m/s',data.indoor_air_speed_m_s,0),ds('Outdoor wind m/s',data.outdoor_wind_m_s,1)], 'Wind speed m/s');
+lineChart('act', data.labels, [ds('Ventilation %',data.ventilation_group_pct,0),ds('Heating %',data.heating_group_pct,1),ds('Light on',data.light_on,2)], 'Actuator level');
+lineChart('energy', data.labels, [ds('Electric kW',data.electric_kw,0),ds('Gas kW',data.gas_kw,1)], 'Energy index');
+const g=data.growth||{}; const groups=g.groups||{}; let sets=[]; Object.keys(groups).forEach(k=>(groups[k]||[]).slice(0,3).forEach(x=>sets.push(ds(k+': '+x.label,x.data,sets.length)))); lineChart('growth', g.labels||[], sets, 'Growth outputs');
+
+</script></body></html>

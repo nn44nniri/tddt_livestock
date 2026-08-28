@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Trans-domain accuracy report</title><script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<style>
+body{font-family:Arial,sans-serif;margin:24px;color:#222} a{text-decoration:none;color:#0b5cad} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px} .card{border:1px solid #ddd;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)} .metric{font-size:1.2rem;font-weight:700} .muted{color:#666;font-size:.86rem} canvas{max-height:360px;margin:20px 0 32px} table{border-collapse:collapse;width:100%;font-size:.85rem} th,td{border:1px solid #ddd;padding:4px 6px} th{background:#f6f6f6} nav a{margin-right:12px}</style>
+</head><body><nav><a href='../index.html'>Report index</a><a href='index.html'>Section index</a></nav><h1>Trans-domain accuracy report</h1><p>This page expands the Accuracy indicators into four TDDT objectives and also includes Evaluation indicators from validation_report.html.</p><div class='grid'><div class='card'><div class='muted'>Thermal comfort accuracy</div><div class='metric'>100.00%</div><div style='color:white;background:#2ecc71;display:inline-block;border-radius:999px;padding:3px 9px'>Excellent</div><p class='muted'>zero outside-band temperature error</p></div><div class='card'><div class='muted'>Low energy consumption accuracy</div><div class='metric'>92.61%</div><div style='color:white;background:#3498db;display:inline-block;border-radius:999px;padding:3px 9px'>Good</div><p class='muted'>zero weather-normalized climate-energy over-budget error; budget is derived from outdoor cold/heat pressure and comfort-band success</p></div><div class='card'><div class='muted'>Low feed consumption accuracy</div><div class='metric'>51.00%</div><div style='color:white;background:#e74c3c;display:inline-block;border-radius:999px;padding:3px 9px'>Weak</div><p class='muted'>growth-adjusted feed pressure per unit gain relative to SARG/best-observed reference</p></div><div class='card'><div class='muted'>Beef production / growth accuracy</div><div class='metric'>96.91%</div><div style='color:white;background:#2ecc71;display:inline-block;border-radius:999px;padding:3px 9px'>Excellent</div><p class='muted'>best SARG growth-simulator reference growth trajectory</p></div></div><h2>Objective accuracy indicators</h2><canvas id='acc'></canvas><h2>Evaluation indicators</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>indicator</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>steps</td>
+      <td>5761</td>
+    </tr>
+    <tr>
+      <td>accuracy_reference</td>
+      <td>comfort-band compliance: indoor_temp_c compared with itself clipped to [LNZ, UNZ]</td>
+    </tr>
+    <tr>
+      <td>time_in_comfort_band_rate</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>comfort_violation_rate</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>below_band_rate</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>above_band_rate</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>mean_indoor_temp_c</td>
+      <td>15.618959</td>
+    </tr>
+    <tr>
+      <td>min_indoor_temp_c</td>
+      <td>14.3052</td>
+    </tr>
+    <tr>
+      <td>max_indoor_temp_c</td>
+      <td>17.3554</td>
+    </tr>
+    <tr>
+      <td>temp_rmse_to_band_center_c</td>
+      <td>5.915903</td>
+    </tr>
+    <tr>
+      <td>mean_normalized_comfort_error</td>
+      <td>0.196149</td>
+    </tr>
+    <tr>
+      <td>mean_indoor_rh_pct</td>
+      <td>49.822071</td>
+    </tr>
+    <tr>
+      <td>mean_outdoor_temp_c</td>
+      <td>14.403321</td>
+    </tr>
+    <tr>
+      <td>mean_outdoor_rh_pct</td>
+      <td>48.538578</td>
+    </tr>
+    <tr>
+      <td>mean_indoor_wind_m_s</td>
+      <td>0.178535</td>
+    </tr>
+    <tr>
+      <td>mean_outdoor_wind_m_s</td>
+      <td>1.740557</td>
+    </tr>
+    <tr>
+      <td>mean_ventilation_pct</td>
+      <td>56.041486</td>
+    </tr>
+    <tr>
+      <td>mean_heating_pct</td>
+      <td>1.09356</td>
+    </tr>
+    <tr>
+      <td>actuator_command_changes</td>
+      <td>2484</td>
+    </tr>
+    <tr>
+      <td>abrupt_actuator_changes</td>
+      <td>695</td>
+    </tr>
+    <tr>
+      <td>oscillatory_actuator_reversals</td>
+      <td>246</td>
+    </tr>
+    <tr>
+      <td>total_electric_kwh_index</td>
+      <td>3298.765569</td>
+    </tr>
+    <tr>
+      <td>total_gas_kwh_index</td>
+      <td>1384.74</td>
+    </tr>
+    <tr>
+      <td>total_energy_kwh_index</td>
+      <td>4683.505569</td>
+    </tr>
+    <tr>
+      <td>raw_simulator_total_energy_kwh_index</td>
+      <td>4683.505569</td>
+    </tr>
+    <tr>
+      <td>energy_note</td>
+      <td>raw_simulator_total_energy_kwh_index comes from simulator-reported electric_kw/gas_kw; actuator_total_kwh_index is normalized from actuator levels and should be used for actuator-use interpretation.</td>
+    </tr>
+    <tr>
+      <td>actuator_electric_kwh_index</td>
+      <td>1460.183333</td>
+    </tr>
+    <tr>
+      <td>actuator_heating_kwh_index</td>
+      <td>63.0</td>
+    </tr>
+    <tr>
+      <td>actuator_total_kwh_index</td>
+      <td>1523.183333</td>
+    </tr>
+    <tr>
+      <td>actuator_energy_model</td>
+      <td>{'fan_kw_at_100pct': 4.0, 'heater_kw_at_100pct': 12.0, 'light_kw_when_on': 1.2, 'dt_hours': 0.08333333333333333}</td>
+    </tr>
+    <tr>
+      <td>mean_mpc_score</td>
+      <td>inf</td>
+    </tr>
+    <tr>
+      <td>mode_name</td>
+      <td>REBUILD-OFFLINE</td>
+    </tr>
+    <tr>
+      <td>learning_elapsed_sec</td>
+      <td>505986.728294</td>
+    </tr>
+  </tbody>
+</table><h2>Raw data</h2><p><a href='../data/accuracy/accuracy_report.json'>accuracy_report.json</a> · <a href='../data/accuracy/accuracy_indicators.csv'>accuracy_indicators.csv</a></p>
+<script>
+const data = {"labels": ["Thermal comfort accuracy", "Low energy consumption accuracy", "Low feed consumption accuracy", "Beef production / growth accuracy"], "accuracy": [1.0, 0.9261015190972223, 0.51004632571771, 0.9691472789905791], "rmse": [0.0, 69.29696171690881, 4.915436467956056, 17.3638731579746], "mae": [0.0, 54.892182291666664, 3.8143568443025897, 15.484910657583157], "relative_error": [0.0, 1.2624195071841582, 0.41658195473896475, 0.030852721009420988]};
+const COLORS=['#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd','#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf'];
+function ds(label, values, colorIndex, dashed=false){return {label,data:values||[],borderColor:COLORS[colorIndex%COLORS.length],backgroundColor:COLORS[colorIndex%COLORS.length],borderDash:dashed?[6,4]:[],pointRadius:0,tension:.12}}
+function lineChart(id,labels,datasets,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'line',data:{labels:labels||[],datasets},options:{responsive:true,interaction:{mode:'index',intersect:false},scales:{y:{title:{display:true,text:yTitle}}}}})}
+function barChart(id,labels,values,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels||[],datasets:[{label:yTitle,data:values||[],backgroundColor:COLORS}]},options:{responsive:true,scales:{y:{beginAtZero:true}}}})}
+
+barChart('acc', data.labels, data.accuracy, 'Accuracy score');
+
+</script></body></html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>TDDT training report index</title><script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<style>
+body{font-family:Arial,sans-serif;margin:24px;color:#222} a{text-decoration:none;color:#0b5cad} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px} .card{border:1px solid #ddd;border-radius:12px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.08)} .metric{font-size:1.2rem;font-weight:700} .muted{color:#666;font-size:.86rem} canvas{max-height:360px;margin:20px 0 32px} table{border-collapse:collapse;width:100%;font-size:.85rem} th,td{border:1px solid #ddd;padding:4px 6px} th{background:#f6f6f6} nav a{margin-right:12px}</style>
+</head><body><nav><a href='../index.html'>Report index</a><a href='index.html'>Section index</a></nav><h1>TDDT training reports</h1><div class="grid"><div class='card'><div class='muted'>steps</div><div class='metric'>5761.0000</div></div>
+<div class='card'><div class='muted'>actuator_command_changes</div><div class='metric'>2484.0000</div></div>
+<div class='card'><div class='muted'>abrupt_actuator_changes</div><div class='metric'>695.0000</div></div>
+<div class='card'><div class='muted'>oscillatory_actuator_reversals</div><div class='metric'>246.0000</div></div>
+<div class='card'><div class='muted'>comfort_violation_rate</div><div class='metric'>0.0000</div></div>
+<div class='card'><div class='muted'>learning_elapsed_sec</div><div class='metric'>505986.7283</div></div></div><h2>Sections</h2><ul><li><a href='daily/index.html'>Daily reports</a></li><li><a href='weekly/index.html'>Weekly reports</a></li><li><a href='monthly/index.html'>Monthly reports</a></li><li><a href='quarterly/index.html'>Quarterly reports</a></li><li><a href='yearly/index.html'>Yearly reports</a></li><li><a href='learning/index.html'>Learning progress</a></li><li><a href='accuracy/index.html'>Accuracy report</a></li><li><a href='advanced_3d/index.html'>Advanced 3D Surface and radar reports</a></li><li><a href='validation_report.html'>Validation summary</a></li><li><a href='ccll_clusters/index.html'>CCLL nearest-centroid cluster report</a></li></ul>
+<script>
+const data = {};
+const COLORS=['#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd','#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf'];
+function ds(label, values, colorIndex, dashed=false){return {label,data:values||[],borderColor:COLORS[colorIndex%COLORS.length],backgroundColor:COLORS[colorIndex%COLORS.length],borderDash:dashed?[6,4]:[],pointRadius:0,tension:.12}}
+function lineChart(id,labels,datasets,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'line',data:{labels:labels||[],datasets},options:{responsive:true,interaction:{mode:'index',intersect:false},scales:{y:{title:{display:true,text:yTitle}}}}})}
+function barChart(id,labels,values,yTitle){const el=document.getElementById(id); if(!el) return; new Chart(el,{type:'bar',data:{labels:labels||[],datasets:[{label:yTitle,data:values||[],backgroundColor:COLORS}]},options:{responsive:true,scales:{y:{beginAtZero:true}}}})}
+
+</script></body></html>

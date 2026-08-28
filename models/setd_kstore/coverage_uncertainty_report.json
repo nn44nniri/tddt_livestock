@@ -1,0 +1,44 @@
+{
+  "coverage": {
+    "storage_method": "SS-KStore",
+    "episode_trace_rows": 288000,
+    "inner_trace_storage": "/home/shabgard/tddt_livestock/working/ss_kstore/segments/inner_loop",
+    "growth_rows": 1000,
+    "guidance_rows": 1000,
+    "sarg_score_rows": 142000,
+    "climate_contexts_seen_in_episode": [
+      "C00",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11"
+    ],
+    "climate_contexts_from_library": [
+      "C00",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11"
+    ],
+    "unseen_contexts": []
+  },
+  "uncertainty_policy": {
+    "if_context_unseen": "nearest_context_low_confidence",
+    "if_state_unseen": "phase_level_policy",
+    "if_both_unseen": "safe_mpc"
+  }
+}

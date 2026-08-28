@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "Cython>=3.0", "numpy>=1.26"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tddt-livestock"
+version = "0.2.0"
+description = "Trans-Domain Digital Twin optimizer for livestock climate and growth coupling"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "Cython>=3.0",
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "matplotlib>=3.7"
+]
+
+[project.scripts]
+tddt-optimizer = "tddt_optimizer.cli:main"
+
+[tool.setuptools]
+packages = { find = { include = ["tddt_optimizer", "tddt_optimizer.*", "funnel", "funnel.*"] } }
+
+[tool.tddt]
+default_mode = "WORK-OFFLINE"
+prepared_5m_csv = "prepared/climate_5m_all_rows.csv"
+prepared_daily_csv = "prepared/growth_daily_all_rows.csv"
+report_dir = "reports"

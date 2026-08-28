@@ -1,0 +1,19 @@
+{
+  "algorithm": "edge_recursive_state_estimator",
+  "formal_layer": "L2_online_state_estimation_and_system_identification",
+  "alpha": 0.025,
+  "uncertainty_decay": 0.995,
+  "min_uncertainty": 0.05,
+  "model_bias_temp_c": 0.0,
+  "model_bias_rh_pct": 0.0,
+  "theta": {
+    "theta_UA": 1.0,
+    "theta_vent": 1.0,
+    "theta_heat": 1.0,
+    "theta_cattle": 1.0,
+    "theta_humidity": 1.0,
+    "theta_gas": 1.0
+  },
+  "uncertainty_radius": 0.05,
+  "updates": 287999
+}

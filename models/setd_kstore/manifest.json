@@ -1,0 +1,23 @@
+{
+  "storage_name": "SETD-KStore backed by SS-KStore segments",
+  "tddt_version": "tddt_livestock",
+  "created_at": "2026-05-17T19:39:32.231479Z",
+  "learning_mode": "single_episode_segmented_streaming",
+  "raw_trace_policy": "append_only_segments_not_loaded_into_RAM",
+  "files": {
+    "ss_kstore_manifest": "/home/shabgard/tddt_livestock/working/ss_kstore/ss_kstore_manifest.json",
+    "inner_segments": "/home/shabgard/tddt_livestock/working/ss_kstore/segments/inner_loop",
+    "daily_summary": "/home/shabgard/tddt_livestock/models/setd_kstore/daily_summary.csv",
+    "hourly_summary": "/home/shabgard/tddt_livestock/models/setd_kstore/hourly_summary.csv",
+    "sampled_trace": "/home/shabgard/tddt_livestock/models/setd_kstore/sampled_trace.csv",
+    "daily_growth_state_memory": "/home/shabgard/tddt_livestock/models/setd_kstore/daily_growth_state_memory.csv",
+    "transdomain_guidance_memory": "/home/shabgard/tddt_livestock/models/setd_kstore/transdomain_guidance_memory.csv",
+    "objective_score_ledger": "/home/shabgard/tddt_livestock/models/setd_kstore/objective_score_ledger.csv",
+    "formal_relation_ledger": "/home/shabgard/tddt_livestock/models/setd_kstore/formal_relation_ledger.csv",
+    "learned_policy_snapshot": "/home/shabgard/tddt_livestock/models/setd_kstore/learned_policy_snapshot.json",
+    "coverage_uncertainty_report": "/home/shabgard/tddt_livestock/models/setd_kstore/coverage_uncertainty_report.json",
+    "edge_rl_policy": "/home/shabgard/tddt_livestock/models/setd_kstore/edge_multilayer_rl_policy.json",
+    "edge_bayesian_tuner": "/home/shabgard/tddt_livestock/models/setd_kstore/edge_contextual_bayesian_tuner.json",
+    "edge_state_estimator": "/home/shabgard/tddt_livestock/models/setd_kstore/edge_state_estimator.json"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "P1": [
+    {
+      "diet": 1,
+      "support_count": 15,
+      "source": "growth_simulator_generated_reference"
+    }
+  ],
+  "P2": [
+    {
+      "diet": 1,
+      "support_count": 15,
+      "source": "growth_simulator_generated_reference"
+    }
+  ],
+  "P3": [
+    {
+      "diet": 1,
+      "support_count": 13,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 4,
+      "support_count": 1,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 2,
+      "support_count": 1,
+      "source": "growth_simulator_generated_reference"
+    }
+  ],
+  "P4": [
+    {
+      "diet": 1,
+      "support_count": 5,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 4,
+      "support_count": 4,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 2,
+      "support_count": 3,
+      "source": "growth_simulator_generated_reference"
+    }
+  ],
+  "P5": [
+    {
+      "diet": 5,
+      "support_count": 7,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 3,
+      "support_count": 3,
+      "source": "growth_simulator_generated_reference"
+    },
+    {
+      "diet": 2,
+      "support_count": 2,
+      "source": "growth_simulator_generated_reference"
+    }
+  ]
+}

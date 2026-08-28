@@ -1,0 +1,20 @@
+{
+  "case_id": 5,
+  "scale": 1,
+  "breed": 6,
+  "diet": 5,
+  "sex_animal": 0,
+  "growth_start_date": "1998-01-01",
+  "growth_end_date": "1999-07-14",
+  "observed_until_day": 560,
+  "final_tbw_kg": 686.2179572552849,
+  "final_beef_production_kg": 328.89421198555203,
+  "cumulative_feed_intake_kg_dm": 3639.5053413035157,
+  "live_tail_repaired_after_event": false,
+  "hereford_export_reconstructed_after_core_stop": false,
+  "limiting_factors_truncated_after_core_stop": false,
+  "limiting_factors_extended_after_live_tail_repair": false,
+  "feed_components_repaired_for_export": false,
+  "core_factor_valid_until_day": 560,
+  "output_csv": "/home/shabgard/Desktop/Livestock_and_poultry_models/Beef_Cattle_Models/LiGAPS-Beef/code/libGAPS-BEEF/CUSTOMIZED/libGAPS-BEEF_20260501_1006/growth_outputs_endof/growth_optimizer_outputs_case_5.csv"
+}

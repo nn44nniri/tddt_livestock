@@ -1,0 +1,1400 @@
+{
+  "runtime": {
+    "default_case_ids": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      10
+    ],
+    "show_progress": false,
+    "progress_leave_outer": true,
+    "progress_leave_inner": false,
+    "progress_mininterval": 0.5,
+    "debug_loop": false,
+    "debug_cases": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      10
+    ],
+    "debug_i": null,
+    "debug_j": null,
+    "debug_max_iter": 200
+  },
+  "case_definitions": {
+    "genotype": [
+      1,
+      1,
+      4,
+      4,
+      1,
+      1,
+      4,
+      4,
+      1,
+      1
+    ],
+    "slaughter_weight_males_kg": [
+      936.1493,
+      717.3103,
+      579.8809,
+      559.7907,
+      877.8683,
+      460.0,
+      574.7075,
+      638.0943,
+      717.469,
+      992.1554
+    ],
+    "housing_phase1": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "housing_phase2": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "housing_phase3": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "feed_availability_1_kg_dm_day": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      20,
+      0,
+      1.9
+    ],
+    "feed_availability_2_kg_dm_day": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0
+    ],
+    "feednr": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      3,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "sensitivity": {
+    "npar_base": 118,
+    "relative_difference": -0.1,
+    "reference_matrix_index_0_based": 118,
+    "run_ids": [
+      119
+    ]
+  },
+  "farming_system": {
+    "default_scale": 1,
+    "default_sex_animal": 0
+  },
+  "housing_climate": {
+    "phase1_days": 84,
+    "phase2_days": 260,
+    "phase3_days": 21,
+    "windmax_m_s": 5,
+    "radtrans_fraction": 0.0,
+    "windred_fraction": 0.5,
+    "tincr_c": 5.6667,
+    "tdelta": 0.8667
+  },
+  "management": {
+    "max_calf_number": 8,
+    "imax_days": 4000,
+    "max_fat_carcass_fraction": 0.0,
+    "max_lifetime_years": 11.36,
+    "max_conception_age_years": 10.0,
+    "culling_rate_fraction_per_year": 0.5,
+    "slaughter_weight_females_kg": 390,
+    "start_day_of_year": 1
+  },
+  "herd_structure": {
+    "sex_calves": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "replacement": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "productive": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "reproductive_when_scale_2": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "reproductive_when_scale_1": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "feed_vector_columns": [
+    "HIF",
+    "FU",
+    "SNSC",
+    "INSC",
+    "PNDF",
+    "SCP",
+    "PICP",
+    "LEFT",
+    "kdINSC",
+    "kdPNDF",
+    "kdPICP",
+    "kdPASS",
+    "UNDF",
+    "NDF",
+    "peNDF",
+    "CP",
+    "GE"
+  ],
+  "feed_library": {
+    "BARLEY": [
+      0.245,
+      0.573,
+      389,
+      214,
+      156.0,
+      34.5,
+      82.8,
+      116.7,
+      0.242,
+      0.145,
+      0.125,
+      0.04,
+      21.0,
+      0.21,
+      0.7,
+      110,
+      18.4
+    ],
+    "CONCENTRATE": [
+      0.249,
+      0.619,
+      262,
+      175,
+      243.1,
+      72.8,
+      87.36,
+      161.74,
+      0.15,
+      0.06,
+      0.1,
+      0.04,
+      42.9,
+      0.286,
+      0.7,
+      182,
+      18.5
+    ],
+    "HAY": [
+      0.318,
+      1.12,
+      100,
+      150,
+      345.8,
+      48.16,
+      74.3,
+      281.74,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      148.2,
+      0.494,
+      1.0,
+      172,
+      18.5
+    ],
+    "HAYPOOR": [
+      0.42,
+      1.37,
+      73,
+      73,
+      462.0,
+      20.3,
+      149.1,
+      347.9,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      198.0,
+      0.66,
+      1.0,
+      70,
+      18.2
+    ],
+    "GRASSSPRING": [
+      0.304,
+      0.96,
+      130,
+      30,
+      360.0,
+      66.25,
+      97.4,
+      361.3,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      120.0,
+      0.4,
+      0.4,
+      265,
+      18.6
+    ],
+    "GRASSSUMMER": [
+      0.356,
+      1.12,
+      100,
+      60,
+      376.0,
+      49.5,
+      76.5,
+      385.0,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      141.0,
+      0.47,
+      0.5,
+      180,
+      18.4
+    ],
+    "GRASSSUMMERDRY": [
+      0.447,
+      1.28,
+      50,
+      60,
+      409.5,
+      23.0,
+      69.0,
+      411.5,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      175.5,
+      0.585,
+      1.0,
+      115,
+      18.1
+    ],
+    "MAIZE": [
+      0.237,
+      0.438,
+      202,
+      532,
+      101.7,
+      20.1,
+      86.56,
+      57.64,
+      0.04,
+      0.051,
+      0.035,
+      0.05,
+      11.3,
+      0.113,
+      0.4,
+      134,
+      17.0
+    ],
+    "MOLASSES": [
+      0.05,
+      0.2,
+      828,
+      0,
+      0,
+      3.8,
+      0.2,
+      0,
+      0,
+      0,
+      0.125,
+      0.04,
+      0,
+      0,
+      0,
+      4,
+      17.0
+    ],
+    "SBM": [
+      0.242,
+      0.526,
+      107,
+      0,
+      138.6,
+      202.8,
+      243.4,
+      232.0,
+      0.242,
+      0.145,
+      0.125,
+      0.04,
+      0.0,
+      0.21,
+      0.4,
+      507,
+      19.7
+    ],
+    "STRAWCER": [
+      0.557,
+      1.8,
+      14,
+      78,
+      401.0,
+      10.0,
+      5.0,
+      370.0,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      0.0,
+      0.21,
+      1.0,
+      40,
+      18.3
+    ],
+    "WHEAT": [
+      0.234,
+      0.475,
+      475,
+      212,
+      80.0,
+      39.9,
+      69.8,
+      0.0,
+      0.182,
+      0.15,
+      0.08,
+      0.04,
+      34.2,
+      0.114,
+      0.7,
+      133,
+      18.2
+    ],
+    "MAIZESILAGE": [
+      0.289,
+      1.0,
+      100,
+      351,
+      239.0,
+      54.94,
+      23.0,
+      483.06,
+      0.25,
+      0.04,
+      0.04,
+      0.03,
+      239.0,
+      0.478,
+      0.93,
+      82,
+      18.5
+    ],
+    "PASTURE": [
+      0.323,
+      1.195,
+      100,
+      60,
+      376.0,
+      49.5,
+      76.5,
+      385.0,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      141.0,
+      0.47,
+      0.5,
+      180,
+      18.4
+    ],
+    "PASTURE1": [
+      0.358,
+      1.12,
+      50,
+      60,
+      551.0,
+      23.0,
+      69.0,
+      411.5,
+      0.3,
+      0.04,
+      0.085,
+      0.035,
+      175.5,
+      0.585,
+      1.0,
+      115,
+      18.1
+    ]
+  },
+  "breed_sex_libraries": {
+    "LIBRARY10": [
+      0.6,
+      0.012,
+      1.0,
+      64.1,
+      48.1,
+      1616.7,
+      48.1,
+      1.6,
+      1.1,
+      316.7,
+      0.0,
+      0.068,
+      1300,
+      0,
+      8,
+      0.068,
+      0.6,
+      1.0,
+      0.32,
+      11.1,
+      0.64,
+      4.4,
+      1.0,
+      3.08,
+      1.73,
+      35.3,
+      0.00338
+    ],
+    "LIBRARY11": [
+      0.6,
+      0.012,
+      1.0,
+      64.1,
+      45.9,
+      1178.7,
+      45.9,
+      1.6,
+      1.1,
+      228.7,
+      8,
+      0.068,
+      950,
+      1,
+      8,
+      0.068,
+      0.6,
+      1.0,
+      0.32,
+      11.8,
+      0.62,
+      4.1,
+      1.0,
+      3.08,
+      1.73,
+      35.3,
+      0.00338
+    ],
+    "LIBRARY20": [
+      0.6,
+      0.012,
+      1.12,
+      64.1,
+      28.0,
+      608.7,
+      28.0,
+      4.2,
+      1.5,
+      8.7,
+      0.0,
+      0.15,
+      600,
+      0,
+      0.551,
+      0.15,
+      0.55,
+      0.91,
+      0.32,
+      13.3,
+      0.578,
+      4.1,
+      1.3,
+      4.89,
+      0.8,
+      34.5
+    ],
+    "LIBRARY21": [
+      0.6,
+      0.012,
+      1.12,
+      64.1,
+      25.0,
+      456.5,
+      25.0,
+      4.2,
+      1.5,
+      6.5,
+      0.551,
+      0.15,
+      450,
+      1,
+      0.551,
+      0.15,
+      0.55,
+      0.91,
+      0.32,
+      14.3,
+      0.55,
+      3.6,
+      1.3,
+      4.89,
+      0.8,
+      34.5
+    ],
+    "LIBRARY30": [
+      0.56,
+      0.012,
+      1.0,
+      64.1,
+      42.0,
+      1308.4,
+      42.0,
+      1.6,
+      1.15,
+      255.7,
+      0.0,
+      0.15,
+      1052.7,
+      0,
+      0.46,
+      0.15,
+      0.55,
+      1.0,
+      0.32,
+      11.6,
+      0.64,
+      4.8,
+      1.0,
+      3.08,
+      1.73,
+      35.3
+    ],
+    "LIBRARY31": [
+      0.56,
+      0.012,
+      1.0,
+      64.1,
+      40.0,
+      769.3,
+      40.0,
+      1.6,
+      1.1,
+      147.3,
+      0.4562,
+      0.15,
+      622,
+      1,
+      0.4562,
+      0.15,
+      0.55,
+      1.0,
+      0.32,
+      12.9,
+      0.62,
+      4.3,
+      1.0,
+      3.08,
+      1.73,
+      35.3
+    ],
+    "LIBRARY40": [
+      0.56,
+      0.012,
+      1.09,
+      64.1,
+      33.0,
+      962.6,
+      33.0,
+      1.6,
+      1.5,
+      187.6,
+      0.0,
+      0.068,
+      775,
+      0,
+      5.68,
+      0.068,
+      0.5,
+      0.93,
+      0.32,
+      11.6,
+      0.5935,
+      4.1,
+      1.225,
+      3.08,
+      2.15,
+      35.6,
+      0.00338
+    ],
+    "LIBRARY41": [
+      0.56,
+      0.012,
+      1.09,
+      64.1,
+      30.0,
+      744.2,
+      30.0,
+      1.6,
+      1.5,
+      144.2,
+      5.68,
+      0.068,
+      675,
+      1,
+      5.68,
+      0.068,
+      0.5,
+      0.93,
+      0.2,
+      11.6,
+      0.55,
+      3.6,
+      1.225,
+      3.08,
+      2.15,
+      35.6,
+      0.00338
+    ],
+    "LIBRARY50": [
+      0.44,
+      0.012,
+      1.0,
+      64.1,
+      41.0,
+      1054.6,
+      41.0,
+      1.6,
+      0.99,
+      204.6,
+      0.0,
+      0.15,
+      850,
+      0,
+      0.3,
+      0.15,
+      0.55,
+      1.0,
+      0.32,
+      11.6,
+      0.6,
+      4.275,
+      1.0,
+      3.08,
+      1.73,
+      35.3
+    ],
+    "LIBRARY51": [
+      0.44,
+      0.012,
+      1.0,
+      64.1,
+      36.9,
+      768.95,
+      36.9,
+      1.6,
+      0.99,
+      147.8,
+      0.4561,
+      0.15,
+      621.15,
+      1,
+      0.3,
+      0.15,
+      0.55,
+      1.0,
+      0.2,
+      11.6,
+      0.57,
+      4.0,
+      1.0,
+      3.08,
+      1.73,
+      35.3
+    ],
+    "LIBRARY60": [
+      0.5,
+      0.017,
+      1.0,
+      64.1,
+      43.0,
+      1294.0,
+      43.0,
+      1.6,
+      1.05,
+      250.0,
+      0.0,
+      0.068,
+      1044.0,
+      0,
+      8.0,
+      0.068,
+      0.55,
+      1.0,
+      0.32,
+      11.6,
+      0.54,
+      4.0,
+      1.0,
+      3.08,
+      1.73,
+      35.3,
+      0.00338
+    ],
+    "LIBRARY61": [
+      0.5,
+      0.017,
+      1.0,
+      64.1,
+      40.5,
+      840.0,
+      40.5,
+      1.6,
+      1.05,
+      160.0,
+      18.0,
+      0.068,
+      680.0,
+      1,
+      8.0,
+      0.068,
+      0.55,
+      1.0,
+      0.2,
+      11.6,
+      0.52,
+      3.5,
+      1.0,
+      3.08,
+      1.73,
+      35.3,
+      0.00338
+    ]
+  },
+  "physical_chemical_constants": {
+    "CtoK": 273.15,
+    "KtoR": 1.8,
+    "kJdaytoW": 0.011574074074074073,
+    "RUC": 0.00078,
+    "EMISS": 0.98,
+    "GRAV": 9.81,
+    "L": 2260,
+    "GAMMA": 66,
+    "TR0": 524,
+    "REFLEgrass": 0.1,
+    "REFLEconcr": 0.5,
+    "Schmidt": 0.61,
+    "Rwater": 461.495,
+    "Cp": 1.005,
+    "P": 101325,
+    "MuSt": 1.827e-05,
+    "SIGMA": 5.67037e-08,
+    "ST": 120,
+    "Rdair": 287.058,
+    "CALTOJOULE": 4.184,
+    "NtoCP": 6.25,
+    "GECARB": 17.4,
+    "GEFEED": 18.5,
+    "GELIPID": 39.6,
+    "GEPROT": 23.8
+  },
+  "cattle_generic_parameters": {
+    "CoatConst": {
+      "expression": "1.90 * 10 ** (-5)",
+      "sensitivity_index_0_based": 0,
+      "value": 1.9e-05
+    },
+    "ZC": {
+      "expression": "11000",
+      "sensitivity_index_0_based": 1,
+      "value": 11000
+    },
+    "TbodyC": {
+      "expression": "39",
+      "sensitivity_index_0_based": 2,
+      "value": 39
+    },
+    "LASMIN": {
+      "expression": "10",
+      "sensitivity_index_0_based": 3,
+      "value": 10
+    },
+    "PHFEEDCAP": {
+      "expression": "123",
+      "sensitivity_index_0_based": 4,
+      "value": 123
+    },
+    "RESPINCR": {
+      "expression": "7.64",
+      "sensitivity_index_0_based": 5,
+      "value": 7.64
+    },
+    "PROTFRACBONE": {
+      "expression": "0.23",
+      "sensitivity_index_0_based": 6,
+      "value": 0.23
+    },
+    "PROTFRACMUSCLE": {
+      "expression": "0.21",
+      "sensitivity_index_0_based": 7,
+      "value": 0.21
+    },
+    "LIPFRACMUSCLE": {
+      "expression": "0.005",
+      "sensitivity_index_0_based": 8,
+      "value": 0.005
+    },
+    "PROTFRACFAT": {
+      "expression": "0.08",
+      "sensitivity_index_0_based": 9,
+      "value": 0.08
+    },
+    "LIPFRACFAT": {
+      "expression": "0.70",
+      "sensitivity_index_0_based": 10,
+      "value": 0.7
+    },
+    "INCARC": {
+      "expression": "0.50",
+      "sensitivity_index_0_based": 11,
+      "value": 0.5
+    },
+    "RUMENFRAC": {
+      "expression": "0.10",
+      "sensitivity_index_0_based": 12,
+      "value": 0.1
+    },
+    "NEm": {
+      "expression": "311",
+      "sensitivity_index_0_based": 13,
+      "value": 311
+    },
+    "NEpha": {
+      "expression": "70",
+      "sensitivity_index_0_based": 14,
+      "value": 70
+    },
+    "BONEFRACMAX": {
+      "expression": "0.25",
+      "sensitivity_index_0_based": 15,
+      "value": 0.25
+    },
+    "LIPNONCMAX": {
+      "expression": "0.80",
+      "sensitivity_index_0_based": 16,
+      "value": 0.8
+    },
+    "LIPNONCMIN": {
+      "expression": "0.15",
+      "sensitivity_index_0_based": 17,
+      "value": 0.15
+    },
+    "PROTEFF": {
+      "expression": "0.54",
+      "sensitivity_index_0_based": 18,
+      "value": 0.54
+    },
+    "LIPIDEFF": {
+      "expression": "0.74",
+      "sensitivity_index_0_based": 19,
+      "value": 0.74
+    },
+    "DERMPL": {
+      "expression": "0.11",
+      "sensitivity_index_0_based": 20,
+      "value": 0.11
+    },
+    "PROTNE": {
+      "expression": "2.0 / CALTOJOULE",
+      "sensitivity_index_0_based": 21,
+      "value": 0.4780114722753346
+    },
+    "GestPer": {
+      "expression": "286",
+      "sensitivity_index_0_based": 22,
+      "value": 286
+    },
+    "GESTINTERVAL": {
+      "expression": "365",
+      "sensitivity_index_0_based": 23,
+      "value": 365
+    },
+    "WEANINGTIME": {
+      "expression": "210",
+      "sensitivity_index_0_based": 24,
+      "value": 210
+    },
+    "FtoConcW": {
+      "expression": "75 / 45",
+      "sensitivity_index_0_based": 25,
+      "value": 1.6666666666666667
+    },
+    "FATFACTOR": {
+      "expression": "0.065",
+      "sensitivity_index_0_based": 26,
+      "value": 0.065
+    },
+    "RAINEXP": {
+      "expression": "0.50",
+      "sensitivity_index_0_based": 27,
+      "value": 0.5
+    },
+    "FRACVEG": {
+      "expression": "0.50",
+      "sensitivity_index_0_based": 28,
+      "value": 0.5
+    },
+    "COMPFACT": {
+      "expression": "4",
+      "sensitivity_index_0_based": 29,
+      "value": 4
+    },
+    "NEIEFFGEST": {
+      "expression": "0.766",
+      "sensitivity_index_0_based": 30,
+      "value": 0.766
+    },
+    "CPGEST": {
+      "expression": "4.322",
+      "sensitivity_index_0_based": 31,
+      "value": 4.322
+    },
+    "MILKDIG": {
+      "expression": "0.95",
+      "sensitivity_index_0_based": 32,
+      "value": 0.95
+    },
+    "NEEFFMILK": {
+      "expression": "0.85",
+      "sensitivity_index_0_based": 33,
+      "value": 0.85
+    },
+    "PROTFRACMILK": {
+      "expression": "0.04",
+      "sensitivity_index_0_based": 34,
+      "value": 0.04
+    },
+    "PROTEFFMILK": {
+      "expression": "0.68",
+      "sensitivity_index_0_based": 35,
+      "value": 0.68
+    },
+    "COMPFACTTIS": {
+      "expression": "1.20",
+      "sensitivity_index_0_based": 36,
+      "value": 1.2
+    },
+    "FATTISCOMP": {
+      "expression": "0.80",
+      "sensitivity_index_0_based": 37,
+      "value": 0.8
+    },
+    "TTDIGINSC": {
+      "expression": "0.97",
+      "sensitivity_index_0_based": 38,
+      "value": 0.97
+    },
+    "DETOME": {
+      "expression": "0.82",
+      "sensitivity_index_0_based": 39,
+      "value": 0.82
+    },
+    "DISSEFF": {
+      "expression": "0.90",
+      "sensitivity_index_0_based": 40,
+      "value": 0.9
+    },
+    "RAINFRAC": {
+      "expression": "0.3",
+      "sensitivity_index_0_based": 90,
+      "value": 0.3
+    },
+    "BONEGROWTH1": {
+      "expression": "0.6436",
+      "sensitivity_index_0_based": 67,
+      "value": 0.6436
+    },
+    "BONEGROWTH2": {
+      "expression": "0.262",
+      "sensitivity_index_0_based": 68,
+      "value": 0.262
+    },
+    "MUSCLEGROWTH1": {
+      "expression": "-2 * 10 ** -5",
+      "sensitivity_index_0_based": 69,
+      "value": -2e-05
+    },
+    "MUSCLEGROWTH2": {
+      "expression": "1.564",
+      "sensitivity_index_0_based": 70,
+      "value": 1.564
+    },
+    "IMFGROWTH1": {
+      "expression": "0.0001",
+      "sensitivity_index_0_based": 71,
+      "value": 0.0001
+    },
+    "IMFGROWTH2": {
+      "expression": "0.01",
+      "sensitivity_index_0_based": 72,
+      "value": 0.01
+    },
+    "IMFGROWTH3": {
+      "expression": "0.04",
+      "sensitivity_index_0_based": 73,
+      "value": 0.04
+    },
+    "PROTNONCM1": {
+      "expression": "-7.014 * (10 ** -3)",
+      "sensitivity_index_0_based": 74,
+      "value": -0.007014
+    },
+    "PROTNONCM2": {
+      "expression": "20.4",
+      "sensitivity_index_0_based": 75,
+      "value": 20.4
+    },
+    "RESPDUR": {
+      "expression": "0.25",
+      "sensitivity_index_0_based": 76,
+      "value": 0.25
+    },
+    "BODYAREA1": {
+      "expression": "0.14",
+      "sensitivity_index_0_based": 77,
+      "value": 0.14
+    },
+    "BODYAREA2": {
+      "expression": "0.57",
+      "sensitivity_index_0_based": 78,
+      "value": 0.57
+    },
+    "DIAMETER1": {
+      "expression": "0.06",
+      "sensitivity_index_0_based": 79,
+      "value": 0.06
+    },
+    "DIAMETER2": {
+      "expression": "0.39",
+      "sensitivity_index_0_based": 80,
+      "value": 0.39
+    },
+    "BASALRR1": {
+      "expression": "73.8",
+      "sensitivity_index_0_based": 81,
+      "value": 73.8
+    },
+    "BASALRR2": {
+      "expression": "-0.286",
+      "sensitivity_index_0_based": 82,
+      "value": -0.286
+    },
+    "BASALTV": {
+      "expression": "0.0117",
+      "sensitivity_index_0_based": 83,
+      "value": 0.0117
+    },
+    "TEXHALED1": {
+      "expression": "17",
+      "sensitivity_index_0_based": 84,
+      "value": 17
+    },
+    "TEXHALED2": {
+      "expression": "0.3",
+      "sensitivity_index_0_based": 85,
+      "value": 0.3
+    },
+    "TEXHALED3": {
+      "expression": "0.01611",
+      "sensitivity_index_0_based": 86,
+      "value": 0.01611
+    },
+    "TEXHALED4": {
+      "expression": "0.0387",
+      "sensitivity_index_0_based": 87,
+      "value": 0.0387
+    },
+    "MINCCS1": {
+      "expression": "0.03",
+      "sensitivity_index_0_based": 88,
+      "value": 0.03
+    },
+    "MINCCS2": {
+      "expression": "0.33",
+      "sensitivity_index_0_based": 89,
+      "value": 0.33
+    },
+    "RAINEVAP1": {
+      "expression": "0.15",
+      "sensitivity_index_0_based": 91,
+      "value": 0.15
+    },
+    "GEMILK1": {
+      "expression": "5.5109",
+      "sensitivity_index_0_based": 93,
+      "value": 5.5109
+    },
+    "GEMILK2": {
+      "expression": "2589",
+      "sensitivity_index_0_based": 94,
+      "value": 2589
+    },
+    "LIPBONE1": {
+      "expression": "0.075",
+      "sensitivity_index_0_based": 95,
+      "value": 0.075
+    },
+    "LIPBONE2": {
+      "expression": "3.0496",
+      "sensitivity_index_0_based": 96,
+      "value": 3.0496
+    },
+    "LIPBONE3": {
+      "expression": "3.3268",
+      "sensitivity_index_0_based": 97,
+      "value": 3.3268
+    },
+    "LIPNONC1": {
+      "expression": "4.7915 * 10 ** -7",
+      "sensitivity_index_0_based": 98,
+      "value": 4.7915e-07
+    },
+    "LIPNONC2": {
+      "expression": "0.00010757",
+      "sensitivity_index_0_based": 99,
+      "value": 0.00010757
+    },
+    "LIPNONC3": {
+      "expression": "0.105717",
+      "sensitivity_index_0_based": 100,
+      "value": 0.105717
+    },
+    "LIPNONC4": {
+      "expression": "2.1723",
+      "sensitivity_index_0_based": 101,
+      "value": 2.1723
+    },
+    "PROTNONC1": {
+      "expression": "8.7492 * 10 ** -10",
+      "sensitivity_index_0_based": 102,
+      "value": 8.7492e-10
+    },
+    "PROTNONC2": {
+      "expression": "9.0732 * 10 ** -7",
+      "sensitivity_index_0_based": 103,
+      "value": 9.0732e-07
+    },
+    "PROTNONC3": {
+      "expression": "0.00033117",
+      "sensitivity_index_0_based": 104,
+      "value": 0.00033117
+    },
+    "PROTNONC4": {
+      "expression": "0.061756",
+      "sensitivity_index_0_based": 105,
+      "value": 0.061756
+    },
+    "PROTNONC5": {
+      "expression": "22.26",
+      "sensitivity_index_0_based": 106,
+      "value": 22.26
+    },
+    "RUMENDEV1": {
+      "expression": "0.007246",
+      "sensitivity_index_0_based": 107,
+      "value": 0.007246
+    },
+    "RUMENDEV2": {
+      "expression": "0.101449",
+      "sensitivity_index_0_based": 108,
+      "value": 0.101449
+    },
+    "NDFDIGEST": {
+      "expression": "0.9",
+      "sensitivity_index_0_based": 109,
+      "value": 0.9
+    },
+    "NDFPASS": {
+      "expression": "0.125",
+      "sensitivity_index_0_based": 110,
+      "value": 0.125
+    },
+    "LUCAS1": {
+      "expression": "0.9",
+      "sensitivity_index_0_based": 111,
+      "value": 0.9
+    },
+    "LUCAS2": {
+      "expression": "32",
+      "sensitivity_index_0_based": 112,
+      "value": 32
+    },
+    "ENNONC1": {
+      "expression": "0.60",
+      "sensitivity_index_0_based": 113,
+      "value": 0.6
+    },
+    "ENNONC2": {
+      "expression": "0.03",
+      "sensitivity_index_0_based": 114,
+      "value": 0.03
+    },
+    "NRECYCL1": {
+      "expression": "121.7",
+      "sensitivity_index_0_based": 115,
+      "value": 121.7
+    },
+    "NRECYCL2": {
+      "expression": "12.01",
+      "sensitivity_index_0_based": 116,
+      "value": 12.01
+    },
+    "NRECYCL3": {
+      "expression": "0.3235",
+      "sensitivity_index_0_based": 117,
+      "value": 0.3235
+    }
+  },
+  "derived_parameters": {
+    "passred": [
+      1,
+      0.85,
+      0.65,
+      0.55
+    ],
+    "mix_sbm_fraction": 0.69,
+    "mix_hay_fraction": 0.31
+  },
+  "breed_6_holstein_parameter_sources": {
+    "LIBRARY60": "Holstein/Holstein-Friesian male vector added from published Holstein birth-weight, mature-weight, growth-curve, coat and carcass literature; unmapped LiGAPS physiological constants retain Bos taurus defaults.",
+    "LIBRARY61": "Holstein/Holstein-Friesian female vector added from published Holstein birth-weight, mature-weight, growth-curve, lactation, coat and carcass literature; unmapped LiGAPS physiological constants retain Bos taurus defaults.",
+    "patch_note": "PATCH_NOTES_20260429_1732_HOLSTEIN_BREED6.md",
+    "calf_milk_available_A_patch_20260429_1752": "Configuration-only correction: the 1-based LIBRARY parameter 15 (milk_available_a, milk available for calf) was reduced from 18.0 to 8.0 for LIBRARY60 and LIBRARY61. The previous 18.0 value represented high dairy-cow lactation potential and caused Holstein calves to remain fully milk-supported until WEANINGTIME=210 d. The corrected value follows the original LiGAPS Bos taurus/Charolais calf milk-availability scale and prevents unrealistically absent roughage/solid-feed intake beyond the normal 6-8 week milk-only window. No code logic was changed."
+  }
+}

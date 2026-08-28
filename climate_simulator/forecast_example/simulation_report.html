@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Beef Hall Climate Simulator Report</title>
+<style>body{font-family:Arial,sans-serif;background:#f3f4f6;color:#111827;margin:0;padding:24px;}header{margin-bottom:20px;}header h1{margin:0 0 8px 0;font-size:28px;}header p{margin:0;color:#374151;font-size:14px;}.panel{background:#fff;border:1px solid #d1d5db;border-radius:12px;padding:14px 16px;margin:0 0 16px 0;box-shadow:0 1px 2px rgba(0,0,0,.05);overflow:hidden;}.panel h2{margin:0 0 10px 0;font-size:17px;}.chart-wrap{position:relative;width:100%;height:260px;min-height:260px;max-height:260px;}canvas{display:block;width:100% !important;height:100% !important;max-height:260px !important;}.summary p{margin:8px 0;font-size:13px;color:#374151;}.layer-note{font-size:12.4px;padding:6px 0;border-top:1px solid #e5e7eb;}</style>
+<script src='chart.min.js'></script>
+</head><body>
+<header><h1>Beef Hall Climate Simulator Report</h1><p>Offline HTML report powered by Chart.js | grouped lights/ventilation/heating | harmful gases CO2/NH3/H2O | separate fan and LED electricity rows</p></header>
+<section class='panel'><h2>Temperature (outdoor/indoor + TNZ)</h2><div class='chart-wrap'><canvas id='tempChart'></canvas></div></section>
+<section class='panel'><h2>Humidity (outdoor/indoor)</h2><div class='chart-wrap'><canvas id='humidityChart'></canvas></div></section>
+<section class='panel'><h2>Wind (outdoor/indoor)</h2><div class='chart-wrap'><canvas id='windChart'></canvas></div></section>
+<section class='panel'><h2>Actuator states</h2><div class='chart-wrap'><canvas id='actuatorChart'></canvas></div></section>
+<section class='panel'><h2>Harmful gases in hall (indoor)</h2><div class='chart-wrap'><canvas id='gasChart'></canvas></div></section>
+<section class='panel'><h2>Ventilation fan electricity consumption</h2><div class='chart-wrap'><canvas id='fanChart'></canvas></div></section>
+<section class='panel'><h2>LED lighting electricity consumption</h2><div class='chart-wrap'><canvas id='ledChart'></canvas></div></section>
+<section class='panel'><h2>Gas consumption</h2><div class='chart-wrap'><canvas id='fuelChart'></canvas></div></section>
+<section class='panel'><h2>Indoor RAD</h2><div class='chart-wrap'><canvas id='radChart'></canvas></div></section>
+<section class='panel'><h2>Indoor OKTA</h2><div class='chart-wrap'><canvas id='oktaChart'></canvas></div></section>
+<section class='panel'><h2>Indoor AHA</h2><div class='chart-wrap'><canvas id='ahaChart'></canvas></div></section>
+<section class='panel summary'><h2>Latest-step Summary</h2>
+<p>Indoor temperature: 7.79273 C | Outdoor temperature: -6 C | LCT: -10 C | UCT: 30.25 C | Zone: inside TNZ</p>
+<p>Indoor RH: 30.7768 % | Outdoor RH: 78 % | Indoor air speed: 0.159848 m/s | Outdoor wind: 3.2 m/s</p>
+<p>CO2: 732.719 ppm | NH3: 1.07947 ppm | H2O: 3.07691 g/m3 | Gas index: 0</p>
+<p>RAD: 195.696 kJ/m2/day | OKTA: 8 | AHA: 1.28023</p>
+<p>Ventilation group: 40 % | Heating group: 55 % | Light: 1</p>
+<p>Fan electric power: 0.66304 kW | LED electric power: 1.764 kW | Gas power: 145.068 kW | Reward: -5.1097</p>
+<div class='layer-note'>BML | Building model: hall 48.00x35.00 m, volume 10500.00 m3, 120 cattle, 28 fans, 6 heaters, 36 lights.</div>
+<div class='layer-note'>ETL | Envelope + inertia: UA=2138.06 W/K, mass=550000000.00 J/K.</div>
+<div class='layer-note'>OCL | Outdoor climate/sensors: T=-6.00 C, RH=78.00 %, wind=3.20 m/s, solar=120.00 W/m2, CO2=420.00 ppm, NH3=0.20 ppm.</div>
+<div class='layer-note'>ALL | Animal load: sensible=48217.41 W, latent=0.01 kg/s, CO2 gen=1634.40 ppm/h, NH3 gen=4.60 ppm/h, H2O gen=3.85 g/m3/h.</div>
+<div class='layer-note'>AOL | Grouped actuators: vent=40.00 %, heat=55.00 %, light=1.</div>
+<div class='layer-note'>LPL | Physics: mech flow=48.84 m3/s, infil=12.13 m3/s, vent loss=1075013.25 W, envelope loss=29871.90 W.</div>
+<div class='layer-note'>ICS | State x_k: Tin=7.79 C, RHin=30.78 %, CO2=732.72 ppm, NH3=1.08 ppm, H2O=3.08 g/m3, RAD=195.70 kJ/m2/day, OKTA=8.00, AHA=1.28, Gin=0.00, Vin=0.16 m/s.</div>
+<div class='layer-note'>TEL | Time evolution: x(k+1)=f(x,u,d,p) advanced with dt and corrected by available indoor sensor measurements for T/RH/wind/CO2/NH3/H2O.</div>
+<div class='layer-note'>EML | Energy: fan=663.04 W, heater fuel=145068.00 W, light=1764.00 W.</div>
+<div class='layer-note'>CCL | Constraints: TNZ [-10.00, 30.25] C, CO2/NH3/H2O bounded, RH bounded, energy non-negative.</div>
+<div class='layer-note'>CEL | Control evaluation: Jcomfort=0.71, Jair=0.00, Jenergy=14.75, reward=-5.11.</div>
+<div class='layer-note'>CIL | Control interface: initialize/reset/observe/propagate/rollout methods expose RL/MPC-friendly interaction.</div>
+<div class='layer-note'>VML | Visualisation: CSV + optional SVG report provide monitoring for grouped layers, TNZ overlays, and harmful gas trends CO2/NH3/H2O plus indoor RAD/OKTA/AHA estimates.</div>
+</section>
+<script>
+const labels=["2026-01-01T00:00:00+300s","2026-01-01T00:00:00+600s","2026-01-01T00:00:00+900s","2026-01-01T00:00:00+1200s","2026-01-01T00:00:00+1500s","2026-01-01T00:00:00+1800s","2026-01-01T00:00:00+2100s","2026-01-01T00:00:00+2400s","2026-01-01T00:00:00+2700s","2026-01-01T00:00:00+3000s","2026-01-01T00:00:00+3300s","2026-01-01T00:00:00+3600s","2026-01-01T00:00:00+3900s","2026-01-01T00:00:00+4200s","2026-01-01T00:00:00+4500s","2026-01-01T00:00:00+4800s","2026-01-01T00:00:00+5100s","2026-01-01T00:00:00+5400s","2026-01-01T00:00:00+5700s","2026-01-01T00:00:00+6000s","2026-01-01T00:00:00+6300s","2026-01-01T00:00:00+6600s","2026-01-01T00:00:00+6900s","2026-01-01T00:00:00+7200s"];
+
+function panelConfig(datasets, yText) {
+  return {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 10 } },
+        tooltip: { enabled: true }
+      },
+      scales: {
+        x: { ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+        y: { beginAtZero: false, title: { display: true, text: yText } }
+      },
+      elements: { point: { radius: 0 } }
+    }
+  };
+}
+function mk(id, datasets, yText) {
+  new Chart(document.getElementById(id), panelConfig(datasets, yText));
+}
+mk('tempChart',[{label:"Outdoor T",data:[-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000,-6.0000],borderColor:'#2563eb',backgroundColor:'#2563eb',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"Indoor T",data:[16.1456,15.3049,14.5614,13.9008,13.3111,12.7819,12.3044,11.8711,11.4759,11.1132,10.7784,10.4678,10.1780,9.9061,9.6498,9.4072,9.1763,8.9558,8.7445,8.5412,8.3451,8.1555,7.9715,7.7927],borderColor:'#dc2626',backgroundColor:'#dc2626',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"LCT",data:[-9.7500,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000,-10.0000],borderColor:'#2563eb',backgroundColor:'#2563eb',borderWidth:2,pointRadius:0,tension:0.25,borderDash:[6,5],fill:false},{label:"UCT",data:[30.7500,33.5000,33.2500,33.0000,32.7500,32.5000,32.2500,32.0000,31.7500,31.7500,31.5000,31.5000,31.2500,31.2500,31.0000,31.0000,30.7500,30.7500,30.5000,30.5000,30.5000,30.2500,30.2500,30.2500],borderColor:'#b91c1c',backgroundColor:'#b91c1c',borderWidth:2,pointRadius:0,tension:0.25,borderDash:[6,5],fill:false}],'deg C');
+mk('humidityChart',[{label:"Outdoor RH",data:[78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000,78.0000],borderColor:'#0f766e',backgroundColor:'#0f766e',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"Indoor RH",data:[29.7008,18.7815,19.6964,20.5514,21.3501,22.0966,22.7954,23.4510,24.0676,24.6495,25.2005,25.7243,26.2240,26.7027,27.1629,27.6070,28.0369,28.4546,28.8615,29.2590,29.6484,30.0305,30.4064,30.7768],borderColor:'#0891b2',backgroundColor:'#0891b2',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'%');
+mk('windChart',[{label:"Outdoor wind",data:[3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000,3.2000],borderColor:'#7c3aed',backgroundColor:'#7c3aed',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"Indoor air speed",data:[0.2509,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598,0.1598],borderColor:'#f97316',backgroundColor:'#f97316',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'m/s');
+mk('actuatorChart',[{label:"Ventilation group %",data:[40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000,40.0000],borderColor:'#059669',backgroundColor:'#059669',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"Heating group %",data:[55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000,55.0000],borderColor:'#d97706',backgroundColor:'#d97706',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"Light on",data:[100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000,100.0000],borderColor:'#111827',backgroundColor:'#111827',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'%');
+mk('gasChart',[{label:"CO2 ppm",data:[1184.6604,988.4386,877.0633,814.1959,778.7094,758.6786,747.3719,740.9897,737.3872,735.3537,734.2058,733.5579,733.1922,732.9858,732.8692,732.8035,732.7663,732.7454,732.7335,732.7269,732.7231,732.7210,732.7198,732.7191],borderColor:'#1d4ed8',backgroundColor:'#1d4ed8',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"NH3 ppm",data:[5.6049,3.6357,2.5223,1.8939,1.5392,1.3390,1.2259,1.1621,1.1261,1.1058,1.0943,1.0879,1.0842,1.0821,1.0810,1.0803,1.0799,1.0797,1.0796,1.0795,1.0795,1.0795,1.0795,1.0795],borderColor:'#b45309',backgroundColor:'#b45309',borderWidth:2,pointRadius:0,tension:0.25,fill:false},{label:"H2O g/m3",data:[9.3052,6.5925,5.0613,4.1970,3.7092,3.4338,3.2784,3.1906,3.1411,3.1131,3.0973,3.0884,3.0834,3.0806,3.0790,3.0781,3.0776,3.0773,3.0771,3.0770,3.0770,3.0769,3.0769,3.0769],borderColor:'#0f766e',backgroundColor:'#0f766e',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'ppm / g/m3');
+mk('fanChart',[{label:"Fan electric kW",data:[0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630,0.6630],borderColor:'#111827',backgroundColor:'#111827',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'kW');
+mk('ledChart',[{label:"LED electric kW",data:[1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640,1.7640],borderColor:'#7c3aed',backgroundColor:'#7c3aed',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'kW');
+mk('fuelChart',[{label:"Gas kW",data:[145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680,145.0680],borderColor:'#be123c',backgroundColor:'#be123c',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'kW');
+mk('radChart',[{label:"RAD",data:[204.2024,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960,195.6960],borderColor:'#7c2d12',backgroundColor:'#7c2d12',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'kJ/m2/day');
+mk('oktaChart',[{label:"OKTA",data:[8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000,8.0000],borderColor:'#1f2937',backgroundColor:'#1f2937',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'okta');
+mk('ahaChart',[{label:"AHA",data:[1.3047,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802,1.2802],borderColor:'#0f766e',backgroundColor:'#0f766e',borderWidth:2,pointRadius:0,tension:0.25,fill:false}],'AHA');
+</script>
+</body></html>

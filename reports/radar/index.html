@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Feed growth phase radar</title><script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+<style>
+body{font-family:Arial,sans-serif;margin:24px;color:#222} a{text-decoration:none;color:#0b5cad} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px} .card{border:1px solid #ddd;border-radius:12px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.08)} .muted{color:#666;font-size:.9rem} .plot{width:100%;height:620px;margin:20px 0 36px} table{border-collapse:collapse;width:100%;font-size:.85rem} th,td{border:1px solid #ddd;padding:4px 6px} th{background:#f6f6f6} nav a{margin-right:12px}
+</style></head><body><nav><a href='../index.html'>Report index</a><a href='index.html'>Advanced 3D Surface and radar reports</a></nav><h1>Feed consumption radar by actual growth phase</h1><p class='muted'>This radar compares feed pressure, feed efficiency, growth output, heat pressure, and confidence across the growth phases observed in this training run. It follows doc/RADAR_REPORT.md.</p><div id='plot' class='plot'></div><h2>Phase legend</h2><p class='muted'>Phase source: existing_column:biological_phase; day column: fattening_day; phase column: biological_phase.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>phase_idx</th>
+      <th>phase_name</th>
+      <th>start_day</th>
+      <th>end_day</th>
+      <th>days_count</th>
+      <th>phase_label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>P1</td>
+      <td>1</td>
+      <td>80</td>
+      <td>80</td>
+      <td>P01: P1 (days 1-80, n=80)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>P2</td>
+      <td>81</td>
+      <td>220</td>
+      <td>140</td>
+      <td>P02: P2 (days 81-220, n=140)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>P3</td>
+      <td>221</td>
+      <td>450</td>
+      <td>230</td>
+      <td>P03: P3 (days 221-450, n=230)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>P4</td>
+      <td>451</td>
+      <td>750</td>
+      <td>300</td>
+      <td>P04: P4 (days 451-750, n=300)</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>P5</td>
+      <td>751</td>
+      <td>1000</td>
+      <td>250</td>
+      <td>P05: P5 (days 751-1000, n=250)</td>
+    </tr>
+  </tbody>
+</table><h2>Interpretation</h2><p>All axes are normalized to 0–1 and direction-aligned. A larger value is better. Low feed pressure is based on feed per kg gain where available.</p>
+<script>
+const data = {"labels": ["low_feed_pressure", "feed_efficiency", "ADG", "TBW_gain", "beef_production", "low_heat_pressure", "low_thermal_stress", "diet_guidance_confidence"], "series": [{"name": "P01: P1 (days 1-80, n=80)", "values": [1.0, 1.0, 0.878091, 0.0, 0.0, 0.513365, 0.5, 0.5]}, {"name": "P02: P2 (days 81-220, n=140)", "values": [0.914893, 0.090108, 1.0, 0.457823, 0.082654, 0.299639, 0.5, 0.5]}, {"name": "P03: P3 (days 221-450, n=230)", "values": [0.677436, 0.013126, 0.915838, 1.0, 0.358451, 0.0, 0.5, 0.5]}, {"name": "P04: P4 (days 451-750, n=300)", "values": [0.428657, 0.004633, 0.466245, 0.869355, 0.886287, 0.362268, 0.5, 0.5]}, {"name": "P05: P5 (days 751-1000, n=250)", "values": [0.0, 0.0, 0.0, 0.128673, 1.0, 1.0, 0.5, 0.5]}], "raw": [{"phase_idx": 1, "phase": "P01: P1 (days 1-80, n=80)", "phase_name": "P1", "start_day": 1, "end_day": 80, "days_count": 80, "feed_intake_mean": 0.23768314424728434, "feed_intake_total": 19.014651539782747, "feed_efficiency": 6.946097959281363, "ADG": 1.117497658121454, "TBW_gain": 88.59981264971631, "beef_production": 2490.4528696028988, "heat_production": 5.844987889787066, "thermal_stress": 0.0, "diet_guidance_confidence": 0.5, "feed_per_kg_gain": 0.21461277367434287}, {"phase_idx": 2, "phase": "P02: P2 (days 81-220, n=140)", "phase_name": "P2", "start_day": 81, "end_day": 220, "days_count": 140, "feed_intake_mean": 2.5412563471302665, "feed_intake_total": 355.7758885982373, "feed_efficiency": 0.6671763842520445, "ADG": 1.2106939847875668, "TBW_gain": 168.19303571342647, "beef_production": 11582.72904562009, "heat_production": 6.754417157875857, "thermal_stress": 0.0, "diet_guidance_confidence": 0.5, "feed_per_kg_gain": 2.11528311555314}, {"phase_idx": 3, "phase": "P03: P3 (days 221-450, n=230)", "phase_name": "P3", "start_day": 221, "end_day": 450, "days_count": 230, "feed_intake_mean": 8.464999703206075, "feed_intake_total": 1946.9499317373975, "feed_efficiency": 0.13594330532832574, "ADG": 1.1463541526036634, "TBW_gain": 262.4512967028064, "beef_production": 41921.70526033793, "heat_production": 8.029420918458532, "thermal_stress": 0.0, "diet_guidance_confidence": 0.5, "feed_per_kg_gain": 7.418328490645932}, {"phase_idx": 4, "phase": "P04: P4 (days 451-750, n=300)", "phase_name": "P4", "start_day": 451, "end_day": 750, "days_count": 300, "feed_intake_mean": 10.368059535229948, "feed_intake_total": 3110.4178605689845, "feed_efficiency": 0.07733902342647954, "ADG": 0.8026519681450115, "TBW_gain": 239.7383931055067, "beef_production": 99986.17108600576, "heat_production": 6.4879226470256075, "thermal_stress": 0.0, "diet_guidance_confidence": 0.5, "feed_per_kg_gain": 12.97421668793833}, {"phase_idx": 5, "phase": "P05: P5 (days 751-1000, n=250)", "phase_name": "P5", "start_day": 751, "end_day": 1000, "days_count": 250, "feed_intake_mean": 10.008257748865718, "feed_intake_total": 2502.0644372164297, "feed_efficiency": 0.0453664771073549, "ADG": 0.4462191595415179, "TBW_gain": 110.96978923450513, "beef_production": 112495.11398820516, "heat_production": 3.7742926330568483, "thermal_stress": 0.0, "diet_guidance_confidence": 0.5, "feed_per_kg_gain": 22.54725772191008}], "phase_metadata": [{"phase_key": "P1", "phase_idx": 1, "phase_label": "P01: P1 (days 1-80, n=80)", "phase_name": "P1", "start_day": 1, "end_day": 80, "days_count": 80}, {"phase_key": "P2", "phase_idx": 2, "phase_label": "P02: P2 (days 81-220, n=140)", "phase_name": "P2", "start_day": 81, "end_day": 220, "days_count": 140}, {"phase_key": "P3", "phase_idx": 3, "phase_label": "P03: P3 (days 221-450, n=230)", "phase_name": "P3", "start_day": 221, "end_day": 450, "days_count": 230}, {"phase_key": "P4", "phase_idx": 4, "phase_label": "P04: P4 (days 451-750, n=300)", "phase_name": "P4", "start_day": 451, "end_day": 750, "days_count": 300}, {"phase_key": "P5", "phase_idx": 5, "phase_label": "P05: P5 (days 751-1000, n=250)", "phase_name": "P5", "start_day": 751, "end_day": 1000, "days_count": 250}], "phase_source": {"source": "existing_column:biological_phase", "day_column": "fattening_day", "phase_column": "biological_phase", "phase_count": 5}, "note": "Values are normalized by actual observed growth phase. Axes are direction-aligned: larger values always mean better performance. Phase ranges are derived from the current training/growth data, not hard-coded day limits."};
+function num(arr) { return (arr || []).map(v => { const x = Number(v); return Number.isFinite(x) ? x : 0; }); }
+function txt(arr) { return (arr || []).map(v => String(v)); }
+
+const traces = (data.series || []).map(s => ({type:'scatterpolar', r:num(s.values).concat([num(s.values)[0] || 0]), theta:(data.labels || []).concat([(data.labels || [])[0] || '']), fill:'toself', name:s.name}));
+Plotly.newPlot('plot', traces, {margin:{l:40,r:40,b:40,t:40}, polar:{radialaxis:{visible:true, range:[0,1]}}, showlegend:true});
+
+</script></body></html>
