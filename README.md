@@ -1,5 +1,51 @@
 # TDDT Livestock — Trans-Domain Digital Twin Optimizer
 
+![Graphical Abstract](images/Graphical_Abstract_Diagram.jpg)
+
+# SE-TDDT for Energy-Efficient Cattle Fattening Barns
+
+The article **“A Trans-Domain Digital Twin for Bio-Aware Control of Climate and Energy in Cattle Fattening Barns Using Single-Episode Optimizer Learning”** presents a Trans-Domain Digital Twin framework, referred to as **SE-TDDT**, for intelligent management of enclosed cattle fattening barns.
+
+The main idea is that barn climate, energy consumption, and animal growth should not be treated as independent problems. Temperature, humidity, airflow, and ventilation directly affect thermal comfort, feed intake, metabolic heat production, Average Daily Gain, and feed efficiency. At the same time, increasing animal body weight changes the metabolic heat load and consequently affects the future ventilation and heating requirements of the barn.
+
+Within this framework, a **five-minute fast control loop** predicts barn climate conditions and actuator commands, including ventilation and heating systems. A **Model Predictive Control (MPC)** strategy then selects control actions that balance animal comfort, operational safety, energy consumption, and biological priorities.
+
+In parallel, a **daily biological loop** evaluates body-weight evolution, Average Daily Gain, feed intake, feed efficiency, metabolic heat production, and growth-limiting factors. These biological indicators are then fed back into the climate-control process. Therefore, environmental regulation is no longer limited to HVAC optimization alone, but becomes directly connected to improving fattening conditions and reducing unnecessary energy consumption.
+
+In the reported evaluation for an enclosed barn containing **120 cattle**, the system maintained thermal comfort with **0% comfort-zone violations**. The reported growth performance reached **96.91%**, while energy performance reached **92.61%**. Over the 1,000-day simulation trajectory, the final body weight approached approximately **917 kg**.
+
+These results demonstrate that the integrated optimization of climate, energy, feed-related conditions, and animal growth can provide a practical foundation for smart cattle fattening barns seeking both improved biological performance and more targeted energy use.
+
+The framework also stores knowledge obtained from a long optimization episode in a structured knowledge memory, allowing the edge controller to reuse learned operating knowledge without requiring GPU acceleration or continuous cloud computation. However, the study also indicates that feed-pressure management, actuator-command smoothing, and real-world field validation remain important areas for further improvement.
+
+## Article
+
+https://doi.org/10.48550/arXiv.2608.27185
+
+---
+![Graphical Abstract](images/Graphical_Abstract_Diagram.jpg)
+
+# SE-TDDT pour des étables d’engraissement bovin à haute efficacité énergétique
+
+L’article **« A Trans-Domain Digital Twin for Bio-Aware Control of Climate and Energy in Cattle Fattening Barns Using Single-Episode Optimizer Learning »** présente un cadre de jumeau numérique transdomaine, appelé **SE-TDDT**, destiné à la gestion intelligente des étables fermées d’engraissement bovin.
+
+L’idée principale consiste à ne pas considérer séparément le climat intérieur, la consommation énergétique et la croissance des animaux. La température, l’humidité, les flux d’air et la ventilation influencent directement le confort thermique, la consommation alimentaire, la production de chaleur métabolique, le gain moyen quotidien, ainsi que l’efficacité alimentaire. Parallèlement, l’augmentation du poids corporel des animaux modifie la charge thermique métabolique et influence donc les besoins futurs de l’étable en ventilation et en chauffage.
+
+Dans ce cadre, une **boucle de contrôle rapide fonctionnant toutes les cinq minutes** prédit l’état climatique de l’étable ainsi que les commandes des actionneurs, notamment les systèmes de ventilation et de chauffage. Une stratégie de **commande prédictive basée sur un modèle, Model Predictive Control (MPC)**, sélectionne ensuite les actions permettant de trouver un compromis entre confort animal, sécurité opérationnelle, consommation énergétique et priorités biologiques.
+
+En parallèle, une **boucle biologique quotidienne** évalue l’évolution du poids corporel, le gain moyen quotidien, l’ingestion alimentaire, l’efficacité alimentaire, la production de chaleur métabolique et les facteurs limitant la croissance. Ces informations biologiques sont ensuite réinjectées dans le processus de contrôle climatique. La régulation de l’environnement intérieur n’est donc plus limitée à l’optimisation du système HVAC, mais devient directement liée à l’amélioration des conditions d’engraissement et à la réduction des dépenses énergétiques inutiles.
+
+Dans l’évaluation présentée pour une étable fermée accueillant **120 bovins**, le système a maintenu le confort thermique avec **0 % de violation de la zone de confort**. Les performances de croissance ont atteint **96,91 %**, tandis que les performances énergétiques ont atteint **92,61 %**. Sur une trajectoire de simulation de 1 000 jours, le poids corporel final a atteint environ **917 kg**.
+
+Ces résultats montrent que l’optimisation intégrée du climat, de l’énergie, des conditions liées à l’alimentation et de la croissance animale peut constituer une base pertinente pour des étables d’engraissement intelligentes recherchant simultanément de meilleures performances biologiques et une utilisation plus ciblée de l’énergie.
+
+Le cadre conserve également les connaissances acquises lors d’un long épisode d’optimisation dans une mémoire structurée. Le contrôleur exécuté en périphérie peut ainsi réutiliser ces connaissances sans nécessiter de GPU ni de calcul cloud permanent. L’étude souligne toutefois que la gestion de la pression alimentaire, le lissage des commandes des actionneurs et la validation dans des conditions réelles d’exploitation restent des axes importants d’amélioration.
+
+## Article
+
+https://doi.org/10.48550/arXiv.2608.27185
+
+---
 This package is a trans-domain digital twin optimizer for livestock housing that connects two existing simulators in two time loops without changing the core logic:
 
 - **Climate inner loop** with 5-minute step: Get state from `funnel` or `simulator_funnel`, choose actuator command by Economic-MPC, safety filter, call climate simulator and record decisions.
